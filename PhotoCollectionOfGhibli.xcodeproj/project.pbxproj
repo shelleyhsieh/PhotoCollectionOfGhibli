@@ -7,23 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D90F1459298F807000D15EF8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90F1458298F807000D15EF8 /* DetailViewController.swift */; };
 		D92D520E295B488700747FEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92D520D295B488700747FEB /* AppDelegate.swift */; };
 		D92D5210295B488700747FEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92D520F295B488700747FEB /* SceneDelegate.swift */; };
-		D92D5212295B488700747FEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92D5211295B488700747FEB /* ViewController.swift */; };
 		D92D5215295B488700747FEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D92D5213295B488700747FEB /* Main.storyboard */; };
-		D92D5217295B488800747FEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D92D5216295B488800747FEB /* Assets.xcassets */; };
 		D92D521A295B488800747FEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D92D5218295B488800747FEB /* LaunchScreen.storyboard */; };
+		D92D5222295B4C4B00747FEB /* photoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92D5221295B4C4B00747FEB /* photoCollectionViewCell.swift */; };
+		D92D5224295B4C6100747FEB /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92D5223295B4C6100747FEB /* PhotoCollectionViewController.swift */; };
+		D92D5228295B4CDB00747FEB /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92D5227295B4CDB00747FEB /* HomePageViewController.swift */; };
+		D92D5258296C5ABF00747FEB /* Photos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D92D5257296C5ABF00747FEB /* Photos.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D90F1458298F807000D15EF8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = SOURCE_ROOT; };
 		D92D520A295B488700747FEB /* PhotoCollectionOfGhibli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoCollectionOfGhibli.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D92D520D295B488700747FEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D92D520F295B488700747FEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D92D5211295B488700747FEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D92D5214295B488700747FEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D92D5216295B488800747FEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D92D5219295B488800747FEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D92D521B295B488800747FEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D92D5221295B4C4B00747FEB /* photoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photoCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
+		D92D5223295B4C6100747FEB /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = SOURCE_ROOT; };
+		D92D5227295B4CDB00747FEB /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = SOURCE_ROOT; };
+		D92D5257296C5ABF00747FEB /* Photos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Photos.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +64,14 @@
 			children = (
 				D92D520D295B488700747FEB /* AppDelegate.swift */,
 				D92D520F295B488700747FEB /* SceneDelegate.swift */,
-				D92D5211295B488700747FEB /* ViewController.swift */,
 				D92D5213295B488700747FEB /* Main.storyboard */,
-				D92D5216295B488800747FEB /* Assets.xcassets */,
 				D92D5218295B488800747FEB /* LaunchScreen.storyboard */,
 				D92D521B295B488800747FEB /* Info.plist */,
+				D92D5257296C5ABF00747FEB /* Photos.xcassets */,
+				D92D5227295B4CDB00747FEB /* HomePageViewController.swift */,
+				D92D5223295B4C6100747FEB /* PhotoCollectionViewController.swift */,
+				D92D5221295B4C4B00747FEB /* photoCollectionViewCell.swift */,
+				D90F1458298F807000D15EF8 /* DetailViewController.swift */,
 			);
 			path = PhotoCollectionOfGhibli;
 			sourceTree = "<group>";
@@ -126,8 +135,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D92D521A295B488800747FEB /* LaunchScreen.storyboard in Resources */,
-				D92D5217295B488800747FEB /* Assets.xcassets in Resources */,
 				D92D5215295B488700747FEB /* Main.storyboard in Resources */,
+				D92D5258296C5ABF00747FEB /* Photos.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +147,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D92D5212295B488700747FEB /* ViewController.swift in Sources */,
+				D92D5224295B4C6100747FEB /* PhotoCollectionViewController.swift in Sources */,
+				D92D5228295B4CDB00747FEB /* HomePageViewController.swift in Sources */,
+				D92D5222295B4C4B00747FEB /* photoCollectionViewCell.swift in Sources */,
+				D90F1459298F807000D15EF8 /* DetailViewController.swift in Sources */,
 				D92D520E295B488700747FEB /* AppDelegate.swift in Sources */,
 				D92D5210295B488700747FEB /* SceneDelegate.swift in Sources */,
 			);

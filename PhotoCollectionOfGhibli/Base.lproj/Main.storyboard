@@ -1,24 +1,368 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5YM-5j-Rht">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home Page View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomePageViewController" customModule="PhotoCollectionOfGhibli" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ego-Ir-5Yj">
+                                <rect key="frame" x="68" y="103" width="257" height="135"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="135" id="4zA-Av-RVx"/>
+                                    <constraint firstAttribute="width" constant="257" id="ccu-PX-PiD"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySo-z7-LNt">
+                                <rect key="frame" x="60" y="258" width="100" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="9EQ-Wd-szO"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="となりのトトロ" image="totoro">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EYB-lb-Enj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="となりのトトロ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYt-xd-u0b">
+                                <rect key="frame" x="60" y="353" width="100" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="cqD-pq-geG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYX-Nr-gjn">
+                                <rect key="frame" x="233" y="258" width="100" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="d6Y-2x-C68"/>
+                                    <constraint firstAttribute="width" constant="100" id="uis-O6-gO4"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="魔女の宅急便" image="kiki">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bkb-GM-kCO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9j-X2-Bee">
+                                <rect key="frame" x="233" y="390" width="100" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="JEh-Wj-KGO"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="千と千尋の神隠し" image="chihiro"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Rf-GX-66u"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0oH-Yr-OP2">
+                                <rect key="frame" x="60" y="390" width="100" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="HSi-0N-08n"/>
+                                    <constraint firstAttribute="width" constant="100" id="ZbH-XD-imw"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="もののけ姫" image="mononoke"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1dl-bT-6gE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jt9-BA-bMx">
+                                <rect key="frame" x="60" y="654" width="100" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="0bN-XE-N3h"/>
+                                    <constraint firstAttribute="width" constant="100" id="Kpu-t8-4uh"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="崖の上のポニョ" image="ponyo"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uRA-JI-e0H"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="崖の上のポニョ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZ8-CQ-GYT">
+                                <rect key="frame" x="60" y="749" width="100" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="もののけ姫" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIE-EH-iAH">
+                                <rect key="frame" x="70" y="485" width="71.666666666666686" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="6kM-E3-sgD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="千と千尋の神隠し" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PL4-GK-83O">
+                                <rect key="frame" x="220.33333333333337" y="485" width="115" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxs-f2-jVL">
+                                <rect key="frame" x="233" y="522" width="100" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="FOR-yK-J1f"/>
+                                    <constraint firstAttribute="height" constant="90" id="P5C-Xz-gj6"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="ハウルの動く城" image="howl"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wuI-Oi-Twc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edI-Uu-Ggr">
+                                <rect key="frame" x="60" y="522" width="100" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="LpV-1L-hL7"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="猫の恩返し" image="pic0"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xwv-VK-GNR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="猫の恩返し" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iaq-O7-bUv">
+                                <rect key="frame" x="70" y="617" width="71.666666666666686" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ハウルの動く城" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTG-4a-NMm">
+                                <rect key="frame" x="228" y="617" width="100" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGh-bJ-IUG">
+                                <rect key="frame" x="233" y="649" width="100" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="aBU-aP-Vr4"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="借りぐらしのアリエッティ" image="girl">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RWQ-Sx-oWE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="借りぐらしのアリエッティ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCr-tb-egk">
+                                <rect key="frame" x="192.66666666666663" y="744" width="171" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="魔女の宅急便" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0KG-s2-FoU">
+                                <rect key="frame" x="235" y="353" width="86" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QYt-xd-u0b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="4WO-kg-eHz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PL4-GK-83O" secondAttribute="trailing" constant="57.670000000000002" id="7cz-Z7-5s7"/>
+                            <constraint firstItem="dCr-tb-egk" firstAttribute="leading" relation="lessThanOrEqual" secondItem="RZ8-CQ-GYT" secondAttribute="trailing" constant="33" id="7gP-Vq-KZx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yYX-Nr-gjn" secondAttribute="trailing" constant="60" id="89z-zN-iWl"/>
+                            <constraint firstItem="vxs-f2-jVL" firstAttribute="leading" secondItem="edI-Uu-Ggr" secondAttribute="trailing" constant="73" id="8JV-y1-It0"/>
+                            <constraint firstItem="WTG-4a-NMm" firstAttribute="leading" secondItem="Iaq-O7-bUv" secondAttribute="trailing" constant="86.333333333333314" id="8NZ-mK-ZDg"/>
+                            <constraint firstItem="WTG-4a-NMm" firstAttribute="top" secondItem="vxs-f2-jVL" secondAttribute="bottom" constant="5" id="9WT-WP-gLF"/>
+                            <constraint firstItem="Ego-Ir-5Yj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Bwr-CY-RbK"/>
+                            <constraint firstItem="UGh-bJ-IUG" firstAttribute="top" secondItem="WTG-4a-NMm" secondAttribute="bottom" constant="20" id="DgE-t8-hPy"/>
+                            <constraint firstItem="yYX-Nr-gjn" firstAttribute="top" secondItem="Ego-Ir-5Yj" secondAttribute="bottom" constant="20" id="Ehg-0Z-MMs"/>
+                            <constraint firstItem="Iaq-O7-bUv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="Fg2-bC-GQW"/>
+                            <constraint firstItem="QYt-xd-u0b" firstAttribute="top" secondItem="ySo-z7-LNt" secondAttribute="bottom" constant="5" id="GI6-On-Taz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RZ8-CQ-GYT" secondAttribute="bottom" constant="57" id="KRe-Y4-M8c"/>
+                            <constraint firstItem="PL4-GK-83O" firstAttribute="leading" relation="lessThanOrEqual" secondItem="KIE-EH-iAH" secondAttribute="trailing" constant="79" id="Kea-lQ-0s0"/>
+                            <constraint firstItem="UGh-bJ-IUG" firstAttribute="trailing" secondItem="yYX-Nr-gjn" secondAttribute="trailing" id="Mgh-Ed-JgD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WTG-4a-NMm" secondAttribute="trailing" constant="65" id="NEP-1f-Tfv"/>
+                            <constraint firstItem="0KG-s2-FoU" firstAttribute="top" secondItem="yYX-Nr-gjn" secondAttribute="bottom" constant="5" id="Orf-n4-44V"/>
+                            <constraint firstItem="E9j-X2-Bee" firstAttribute="top" secondItem="0KG-s2-FoU" secondAttribute="bottom" constant="20" id="PAo-zI-muT"/>
+                            <constraint firstItem="KIE-EH-iAH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="PjA-6N-YaK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PL4-GK-83O" secondAttribute="trailing" constant="57.670000000000002" id="Q2U-wp-LIg"/>
+                            <constraint firstItem="dCr-tb-egk" firstAttribute="top" secondItem="UGh-bJ-IUG" secondAttribute="bottom" constant="5" id="QrV-xq-ztH"/>
+                            <constraint firstItem="yYX-Nr-gjn" firstAttribute="leading" secondItem="ySo-z7-LNt" secondAttribute="trailing" constant="73" id="SWy-Jh-EUe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vxs-f2-jVL" secondAttribute="trailing" constant="60" id="T5a-TV-3KQ"/>
+                            <constraint firstItem="vxs-f2-jVL" firstAttribute="trailing" secondItem="yYX-Nr-gjn" secondAttribute="trailing" id="Ti8-nL-4sZ"/>
+                            <constraint firstItem="edI-Uu-Ggr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="W8O-t5-1yM"/>
+                            <constraint firstItem="0oH-Yr-OP2" firstAttribute="leading" secondItem="ySo-z7-LNt" secondAttribute="leading" id="XmV-nT-L96"/>
+                            <constraint firstItem="UGh-bJ-IUG" firstAttribute="leading" secondItem="jt9-BA-bMx" secondAttribute="trailing" constant="73" id="YRz-67-hHd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dCr-tb-egk" secondAttribute="bottom" constant="57" id="Z1J-Sc-BsM"/>
+                            <constraint firstItem="0oH-Yr-OP2" firstAttribute="top" secondItem="QYt-xd-u0b" secondAttribute="bottom" constant="20" id="ZUb-K1-eAv"/>
+                            <constraint firstItem="0KG-s2-FoU" firstAttribute="leading" relation="lessThanOrEqual" secondItem="QYt-xd-u0b" secondAttribute="trailing" constant="77" id="Zh5-sV-g1q"/>
+                            <constraint firstItem="PL4-GK-83O" firstAttribute="top" secondItem="E9j-X2-Bee" secondAttribute="bottom" constant="5" id="adm-FB-JRX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0KG-s2-FoU" secondAttribute="trailing" constant="72" id="dqX-fN-Wpp"/>
+                            <constraint firstItem="RZ8-CQ-GYT" firstAttribute="top" secondItem="jt9-BA-bMx" secondAttribute="bottom" constant="5" id="fzi-68-gKi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dCr-tb-egk" secondAttribute="trailing" constant="29.329999999999998" id="g3U-XW-fSE"/>
+                            <constraint firstItem="KIE-EH-iAH" firstAttribute="top" secondItem="0oH-Yr-OP2" secondAttribute="bottom" constant="5" id="gCS-0e-w6h"/>
+                            <constraint firstItem="0oH-Yr-OP2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="hV5-BY-JUD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E9j-X2-Bee" secondAttribute="trailing" constant="60" id="hyv-Ck-HwH"/>
+                            <constraint firstItem="RZ8-CQ-GYT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="iCR-lm-Lza"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UGh-bJ-IUG" secondAttribute="trailing" constant="60" id="j3m-tI-UEH"/>
+                            <constraint firstItem="vxs-f2-jVL" firstAttribute="top" secondItem="PL4-GK-83O" secondAttribute="bottom" constant="20" id="kOe-rX-L5Y"/>
+                            <constraint firstItem="jt9-BA-bMx" firstAttribute="leading" secondItem="ySo-z7-LNt" secondAttribute="leading" id="knC-Yb-HuS"/>
+                            <constraint firstItem="Iaq-O7-bUv" firstAttribute="top" secondItem="edI-Uu-Ggr" secondAttribute="bottom" constant="5" id="p3u-iK-dsU"/>
+                            <constraint firstItem="edI-Uu-Ggr" firstAttribute="leading" secondItem="ySo-z7-LNt" secondAttribute="leading" id="q1O-2Y-MOl"/>
+                            <constraint firstItem="jt9-BA-bMx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="q6o-lP-LXN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ego-Ir-5Yj" secondAttribute="trailing" constant="68" id="qqd-bq-CgS"/>
+                            <constraint firstItem="Ego-Ir-5Yj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="68" id="r8k-ap-9kV"/>
+                            <constraint firstItem="edI-Uu-Ggr" firstAttribute="top" secondItem="KIE-EH-iAH" secondAttribute="bottom" constant="20" id="tW5-4A-EPY"/>
+                            <constraint firstItem="jt9-BA-bMx" firstAttribute="top" secondItem="Iaq-O7-bUv" secondAttribute="bottom" constant="20" id="uUj-9g-bPh"/>
+                            <constraint firstItem="ySo-z7-LNt" firstAttribute="top" secondItem="Ego-Ir-5Yj" secondAttribute="bottom" constant="20" id="ukr-7r-Ol0"/>
+                            <constraint firstItem="E9j-X2-Bee" firstAttribute="trailing" secondItem="yYX-Nr-gjn" secondAttribute="trailing" id="vaV-yV-6zR"/>
+                            <constraint firstItem="E9j-X2-Bee" firstAttribute="leading" secondItem="0oH-Yr-OP2" secondAttribute="trailing" constant="73" id="wWg-Y9-4Pp"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Ltg-EF-ZNZ"/>
+                    <connections>
+                        <segue destination="Hl8-XJ-Ez4" kind="show" identifier="showPhotos" destinationCreationSelector="showPhotos:" id="wow-5S-DKj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1559.5419847328244" y="-327.46478873239437"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="3A9-IQ-dkm">
+            <objects>
+                <collectionViewController id="Hl8-XJ-Ez4" customClass="PhotoCollectionViewController" customModule="PhotoCollectionOfGhibli" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="gO7-bJ-haL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ghI-Ft-tcv">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCollectionViewCell" id="zux-k7-bMI" customClass="photoCollectionViewCell" customModule="PhotoCollectionOfGhibli" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dpB-rd-WUg">
+                                    <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lkJ-vv-mVt">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="128" id="KRs-oq-Gjb"/>
+                                                <constraint firstAttribute="height" constant="128" id="w6l-Uk-eQh"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="lkJ-vv-mVt" firstAttribute="leading" secondItem="dpB-rd-WUg" secondAttribute="leading" id="05A-cM-Sau"/>
+                                        <constraint firstAttribute="bottom" secondItem="lkJ-vv-mVt" secondAttribute="bottom" id="G6e-Va-HbZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="lkJ-vv-mVt" secondAttribute="trailing" id="pht-vH-b4A"/>
+                                        <constraint firstItem="lkJ-vv-mVt" firstAttribute="top" secondItem="dpB-rd-WUg" secondAttribute="top" id="xXW-Xw-waa"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="imageView" destination="lkJ-vv-mVt" id="Cmw-ZS-6uY"/>
+                                    <segue destination="FU7-wx-nFc" kind="show" identifier="showPhotoDetail" destinationCreationSelector="showPhotoDetail:" id="WCt-RO-i0r"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Hl8-XJ-Ez4" id="o1D-ro-abc"/>
+                            <outlet property="delegate" destination="Hl8-XJ-Ez4" id="Vby-5C-YpJ"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Title" id="LNg-pN-bq1"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iI6-lc-uqO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2350" y="-326"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="iIb-Fd-ikv">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="FU7-wx-nFc" customClass="DetailViewController" customModule="PhotoCollectionOfGhibli" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WVB-Oy-ta5">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4co-vP-ztF">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VCh-2P-b0w"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4co-vP-ztF" firstAttribute="bottom" secondItem="VCh-2P-b0w" secondAttribute="bottom" id="7kz-JO-4o1"/>
+                            <constraint firstItem="VCh-2P-b0w" firstAttribute="trailing" secondItem="4co-vP-ztF" secondAttribute="trailing" id="DrV-t2-Fnz"/>
+                            <constraint firstItem="4co-vP-ztF" firstAttribute="leading" secondItem="VCh-2P-b0w" secondAttribute="leading" id="MP9-Pf-Zfj"/>
+                            <constraint firstItem="4co-vP-ztF" firstAttribute="top" secondItem="VCh-2P-b0w" secondAttribute="top" id="UZu-ra-sPM"/>
+                            <constraint firstItem="4co-vP-ztF" firstAttribute="trailing" secondItem="VCh-2P-b0w" secondAttribute="trailing" id="cTN-AF-Mhr"/>
+                            <constraint firstItem="4co-vP-ztF" firstAttribute="leading" secondItem="VCh-2P-b0w" secondAttribute="leading" id="chm-ck-p7s"/>
+                            <constraint firstItem="4co-vP-ztF" firstAttribute="top" secondItem="VCh-2P-b0w" secondAttribute="top" id="iDV-aX-Khw"/>
+                            <constraint firstItem="VCh-2P-b0w" firstAttribute="bottom" secondItem="4co-vP-ztF" secondAttribute="bottom" id="qAr-vo-VDI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Jwh-0w-ypI"/>
+                    <connections>
+                        <outlet property="imageView" destination="4co-vP-ztF" id="c5V-Jg-b4V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eSs-nQ-B6A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3089" y="-327"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="r9g-aM-XPY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5YM-5j-Rht" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="photo" catalog="system" id="8eM-gR-xRR"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XO4-Vo-BOS">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="XrN-r0-Zg4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Idq-9v-Sfb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="804" y="-326"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+    <resources>
+        <image name="chihiro" width="524" height="470"/>
+        <image name="girl" width="526" height="430"/>
+        <image name="howl" width="526" height="464"/>
+        <image name="kiki" width="524" height="502"/>
+        <image name="mononoke" width="524" height="468"/>
+        <image name="photo" catalog="system" width="128" height="93"/>
+        <image name="pic0" width="1548" height="1244"/>
+        <image name="ponyo" width="524" height="434"/>
+        <image name="totoro" width="520" height="468"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
